@@ -20,12 +20,12 @@ public class EyeballMovement : MonoBehaviour {
 //		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
 //		rot *= Quaternion.Euler (0, 0, 90);
 //
-//		if ((transform.position.x - mousePosition.x) > 0) {
-//			transform.localScale = new Vector3 (.25f, -.25f, .25f);
-//		}
-//		if ((transform.position.x - mousePosition.x) < 0){
-//			transform.localScale = new Vector3(.25f, .25f, .25f);
-//		}
+		if ((transform.position.x - mousePosition.x) > 0) {
+			transform.localScale = new Vector3 (.75f, .75f, .75f);
+		}
+		if ((transform.position.x - mousePosition.x) < 0){
+			transform.localScale = new Vector3(-.75f, .75f, .75f);
+		}
 //		if ((transform.position.x == mousePosition.x) && (transform.position.y == mousePosition.y)) {
 //			rigidbody2D.velocity = Vector3.zero;
 //			rigidbody2D.angularVelocity = 0f;
