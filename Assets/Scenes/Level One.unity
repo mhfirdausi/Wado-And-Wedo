@@ -514,7 +514,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 465648, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 116.699997
+      value: -9.19999981
       objectReference: {fileID: 0}
     - target: {fileID: 465648, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
       propertyPath: m_LocalPosition.y
@@ -546,7 +546,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
       propertyPath: jumpHeight
-      value: 11
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
       propertyPath: m_Enabled
@@ -559,6 +559,18 @@ Prefab:
     - target: {fileID: 21265648, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
       propertyPath: m_SortingLayerID
       value: 3128536165
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
+      propertyPath: cutJumpSpeed
+      value: 4.01999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
+      propertyPath: gravity
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
+      propertyPath: speed
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
@@ -2224,12 +2236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328f7487f25792a439c6fcdd35155f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 20
-  walkSpeed: 8
-  runSpeed: 12
+  gravity: 45
+  speed: 12
   acceleration: 30
-  jumpHeight: 11
-  cutJumpSpeed: 2.92000008
+  jumpHeight: 18
+  cutJumpSpeed: 4.01999998
 --- !u!65 &300375399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2273,7 +2284,7 @@ Transform:
   m_PrefabInternal: {fileID: 61024592}
   m_GameObject: {fileID: 300375396}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 116.699997, y: 3.9000001, z: 0}
+  m_LocalPosition: {x: -9.19999981, y: 3.9000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
