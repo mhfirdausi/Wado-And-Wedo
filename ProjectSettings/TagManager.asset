@@ -45,6 +45,7 @@ TagManager:
     userID: 0
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Terrain
     userID: 2
     uniqueID: 730261157
@@ -56,4 +57,13 @@ TagManager:
   - name: UI
     userID: 1
     uniqueID: 1210420797
+=======
+  - name: Background
+    userID: 2
+    uniqueID: 643786923
+    locked: 0
+  - name: Foreground
+    userID: 1
+    uniqueID: 3128536165
+>>>>>>> origin/master
     locked: 0
