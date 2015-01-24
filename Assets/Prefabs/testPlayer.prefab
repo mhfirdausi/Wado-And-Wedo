@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6565648}
   - 114: {fileID: 11465646}
   - 114: {fileID: 11465648}
+  - 54: {fileID: 5423734}
   m_Layer: 9
   m_Name: testPlayer
   m_TagString: Untagged
@@ -26,11 +27,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.189999998, y: 2.43000007, z: 0}
+  m_LocalPosition: {x: -9, y: 3.9000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5423734
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165648}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6565648
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -41,7 +57,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: .200000003}
+  m_Size: {x: 1, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11465646
 MonoBehaviour:
@@ -54,12 +70,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328f7487f25792a439c6fcdd35155f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 20
-  walkSpeed: 8
-  runSpeed: 12
+  gravity: 45
+  speed: 10
   acceleration: 30
-  jumpHeight: 12
-  cutJumpSpeed: 2.92000008
+  jumpHeight: 18
+  hasDoubleJump: 0
+  cutJumpSpeed: 7
 --- !u!114 &11465648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +110,7 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayerID: 3128536165
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8bfac0e1f0b02d1459ee9d67e72f6719, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

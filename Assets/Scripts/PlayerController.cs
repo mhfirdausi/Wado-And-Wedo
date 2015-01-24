@@ -129,12 +129,12 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision collision){
+	void OnTriggerEnter(Collider collision){
 		Debug.Log ("Collided");
 		if (collision.gameObject.layer == 10) 
 		{
 			death = true;
-			Debug.Log (death);
+			Debug.Log ("Died");
 		}
 	}
 }
