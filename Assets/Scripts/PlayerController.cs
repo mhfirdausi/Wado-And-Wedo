@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
 	private bool isJumping;
 	private float cutJumpSpeedLimit;
 	private bool isPlatformer = false;
+	private bool death;
 
 	
 	private PlayerPhysics playerPhysics;
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
+		death = false;
 
 		//animator = GetComponent<Animator>();
 	}
@@ -124,6 +126,15 @@ public class PlayerController : MonoBehaviour {
 			float dir = Mathf.Sign(target - n); // must n be increased or decreased to get closer to target
 			n += a * Time.deltaTime * dir;
 			return (dir == Mathf.Sign(target-n))? n: target; // if n has now passed target then return target, otherwise return n
+		}
+	}
+
+	void OnCollisionEnter(Collision collision){
+		Debug.Log ("Collided");
+		if (collision.gameObject.layer == 10) 
+		{
+			death = true;
+			Debug.Log (death);
 		}
 	}
 }
