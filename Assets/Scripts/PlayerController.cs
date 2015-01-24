@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour {
 	
 	// Player Handling
 	public float gravity = 20;
-	public float walkSpeed = 8;
-	public float runSpeed = 12;
+	public float speed = 8;
 	public float acceleration = 30;
 	public float jumpHeight = 12;
 	public float cutJumpSpeed = 10;
@@ -18,6 +17,7 @@ public class PlayerController : MonoBehaviour {
 	private Vector2 amountToMove;
 	private bool isJumping;
 	private float cutJumpSpeedLimit;
+	private bool isPlatformer;
 
 	
 	private PlayerPhysics playerPhysics;
@@ -31,11 +31,22 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-		// Reset acceleration upon collision
-		/*if (playerPhysics.movementStopped) {
-			targetSpeed = 0;
-			currentSpeed = 0;
-		}*/
+		if (Input.GetButtonDown ("Run")) {
+			if (isPlatformer) {
+				isPlatformer = false;
+			} 
+			else {
+				isPlatformer = true;
+			}
+		}
+		 //Reset acceleration upon collision
+		if(!isPlatformer)
+		{	
+			if (playerPhysics.movementStopped) {
+				targetSpeed = 0;
+				currentSpeed = 0;
+			}
+		}
 		
 		// If player is touching the ground
 		if (playerPhysics.grounded) {
@@ -60,10 +71,14 @@ public class PlayerController : MonoBehaviour {
 		//animator.SetFloat("Speed",animationSpeed);
 		
 		// Input
-		//float speed = (Input.GetButton("Run"))?runSpeed:walkSpeed;
-		//targetSpeed = Input.GetAxisRaw("Horizontal") * speed;
-		//currentSpeed = IncrementTowards(currentSpeed, targetSpeed,acceleration);
-		currentSpeed = 10.0f;
+		if (isPlatformer) {
+			currentSpeed = 10.0f;
+		} 
+		else {
+			targetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
+			currentSpeed = IncrementTowards (currentSpeed, targetSpeed, acceleration);
+		}
+
 		// Set amount to move
 		amountToMove.x = currentSpeed;
 		amountToMove.y -= gravity * Time.deltaTime;
