@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 12;
 	public float acceleration = 30;
 	public float jumpHeight = 18;
+<<<<<<< HEAD
 	public float cutJumpSpeed = 10;
+=======
+	public float cutJumpSpeed = 4;
+>>>>>>> origin/master
 
 	private float animationSpeed;
 	private float currentSpeed;
