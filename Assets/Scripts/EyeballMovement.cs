@@ -48,4 +48,8 @@ public class EyeballMovement : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D coll) {
+		Debug.Log ("Triggered " + coll.gameObject.name);
+	}
 }

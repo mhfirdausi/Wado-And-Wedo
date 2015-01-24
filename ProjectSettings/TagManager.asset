@@ -4,6 +4,10 @@
 TagManager:
   tags:
   - 
+  - EyeballSmash
+  - DeadlyToEyeball
+  - Switches
+  - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
   Builtin Layer 2: Ignore Raycast
@@ -40,4 +44,16 @@ TagManager:
   - name: Default
     userID: 0
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    userID: 2
+    uniqueID: 730261157
+    locked: 0
+  - name: Player
+    userID: 3
+    uniqueID: 1694968407
+    locked: 0
+  - name: UI
+    userID: 1
+    uniqueID: 1210420797
     locked: 0
