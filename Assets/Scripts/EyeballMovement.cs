@@ -15,7 +15,7 @@ public class EyeballMovement : MonoBehaviour {
 		moveSpeed = 10f;
 		mousePosition = Input.mousePosition;
 		mousePosition = Camera.main.ScreenToWorldPoint (mousePosition);
-		transform.position = Vector2.Lerp (transform.position, mousePosition, moveSpeed);
+		transform.position = Vector2.Lerp (transform.position, mousePosition, moveSpeed * Time.smoothDeltaTime);
 
 //		Quaternion rot = Quaternion.LookRotation (transform.position - mousePosition, Vector3.forward);
 //		rot *= Quaternion.Euler (0, 0, 90);
