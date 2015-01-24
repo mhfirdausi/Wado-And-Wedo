@@ -5,11 +5,11 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	
 	// Player Handling
-	public float gravity = 20;
-	public float speed = 8;
+	public float gravity = 45;
+	public float speed = 12;
 	public float acceleration = 30;
-	public float jumpHeight = 12;
-	public float cutJumpSpeed = 10;
+	public float jumpHeight = 18;
+	public float cutJumpSpeed = 4;
 
 	private float animationSpeed;
 	private float currentSpeed;
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour {
 		
 		// Input
 		if (isPlatformer) {
-			currentSpeed = 10.0f;
+			currentSpeed = speed;
 		} 
 		else {
 			targetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
