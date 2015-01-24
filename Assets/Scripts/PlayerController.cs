@@ -32,10 +32,10 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
 		// Reset acceleration upon collision
-		if (playerPhysics.movementStopped) {
+		/*if (playerPhysics.movementStopped) {
 			targetSpeed = 0;
 			currentSpeed = 0;
-		}
+		}*/
 		
 		// If player is touching the ground
 		if (playerPhysics.grounded) {
@@ -60,10 +60,10 @@ public class PlayerController : MonoBehaviour {
 		//animator.SetFloat("Speed",animationSpeed);
 		
 		// Input
-		float speed = (Input.GetButton("Run"))?runSpeed:walkSpeed;
-		targetSpeed = Input.GetAxisRaw("Horizontal") * speed;
-		currentSpeed = IncrementTowards(currentSpeed, targetSpeed,acceleration);
-		
+		//float speed = (Input.GetButton("Run"))?runSpeed:walkSpeed;
+		//targetSpeed = Input.GetAxisRaw("Horizontal") * speed;
+		//currentSpeed = IncrementTowards(currentSpeed, targetSpeed,acceleration);
+		currentSpeed = 10.0f;
 		// Set amount to move
 		amountToMove.x = currentSpeed;
 		amountToMove.y -= gravity * Time.deltaTime;

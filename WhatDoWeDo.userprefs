@@ -6,7 +6,7 @@
       <File FileName="..\platformer scripts\Scripts\PlayerController.cs" Line="26" Column="47" />
       <File FileName="..\platformer scripts\Scripts\PlayerPhysics.cs" Line="10" Column="31" />
       <File FileName="Assets\Scripts\Camera.cs" Line="14" Column="93" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="52" Column="36" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="51" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
