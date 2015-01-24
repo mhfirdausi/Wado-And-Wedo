@@ -44,5 +44,8 @@ public class EyeballMovement : MonoBehaviour {
 		if (coll.gameObject.tag == "EyeballSmash") {
 			Destroy(coll.gameObject);
 		}
+		if (coll.gameObject.tag == "DeadlyToEyeball") {
+			Destroy(this.gameObject);
+		}
 	}
 }
