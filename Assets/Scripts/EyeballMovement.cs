@@ -3,7 +3,9 @@ using System.Collections;
 
 public class EyeballMovement : MonoBehaviour {
 	private Vector3 mousePosition;
+	public GameManager gameManager;
 	public float moveSpeed = .5f;
+	
 
 	// Use this for initialization
 	void Start () {

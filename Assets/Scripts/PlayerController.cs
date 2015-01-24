@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour {
 	public bool hasDoubleJump = false;
 
 	public float cutJumpSpeed = 10;
+	
+	public GameManager gameManager;
 
 
 	private int jumps;
@@ -130,11 +132,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider collision){
-		Debug.Log ("Collided");
+		//Debug.Log ("Collided");
 		if (collision.gameObject.layer == 10) 
 		{
-			death = true;
-			Debug.Log ("Died");
+			gameManager.callDeath();
 		}
 	}
 }
