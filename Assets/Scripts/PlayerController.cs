@@ -9,12 +9,12 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 12;
 	public float acceleration = 30;
 	public float jumpHeight = 18;
-<<<<<<< HEAD
-	public float cutJumpSpeed = 10;
-=======
-	public float cutJumpSpeed = 4;
->>>>>>> origin/master
+	public bool hasDoubleJump = false;
 
+	public float cutJumpSpeed = 10;
+
+
+	private int jumps;
 	private float animationSpeed;
 	private float currentSpeed;
 	private float targetSpeed;
@@ -31,15 +31,18 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
+
 		//animator = GetComponent<Animator>();
 	}
 	
 	void Update () {
 		if (Input.GetButtonDown ("Run")) {
-			if (isPlatformer) {
+			if (isPlatformer) 
+			{
 				isPlatformer = false;
 			} 
-			else {
+			else 
+			{
 				isPlatformer = true;
 			}
 		}
@@ -53,17 +56,21 @@ public class PlayerController : MonoBehaviour {
 		}
 		
 		// If player is touching the ground
-		if (playerPhysics.grounded) {
+		if (playerPhysics.grounded) 
+		{
 			amountToMove.y = 0;
 			isJumping = false;
+			resetJumps();
+		}
 			
 			// Jump
-			if (Input.GetButtonDown("Jump")) {
-				amountToMove.y = jumpHeight;
-				isJumping = true;
-			}
-
+		if (Input.GetButtonDown("Jump") && jumps != 0) 
+		{
+			amountToMove.y = jumpHeight;
+			isJumping = true;
+			jumps--;
 		}
+
 		if (Input.GetButtonUp("Jump") && isJumping && amountToMove.y > cutJumpSpeedLimit) 
 		{
 			Debug.Log("Entered");
@@ -94,6 +101,18 @@ public class PlayerController : MonoBehaviour {
 			transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
 		}
 
+	}
+
+	void resetJumps()
+	{
+		if (hasDoubleJump) 
+		{
+			jumps = 2;
+		}
+		else 
+		{
+			jumps = 1;
+		}
 	}
 	
 	// Increase n towards target by speed
