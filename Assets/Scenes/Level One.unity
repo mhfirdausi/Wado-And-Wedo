@@ -513,7 +513,7 @@ Transform:
   - {fileID: 1595090290}
   - {fileID: 190337727}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!1001 &19243252
 Prefab:
   m_ObjectHideFlags: 0
@@ -2681,7 +2681,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
@@ -2931,7 +2931,7 @@ Transform:
   m_LocalScale: {x: 1.125, y: 1.65374899, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
 --- !u!1 &203182097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,7 +3941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 5
 --- !u!54 &300375402
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4555,7 +4555,7 @@ Transform:
   m_LocalScale: {x: -.75, y: .75, z: .75}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
 --- !u!135 &338584844
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8610,7 +8610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
 --- !u!114 &622800604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9568,7 +9568,7 @@ Transform:
   - {fileID: 721129466}
   - {fileID: 219662172}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
 --- !u!1001 &688662379
 Prefab:
   m_ObjectHideFlags: 0
@@ -14110,7 +14110,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426460, guid: f93aa514824303a4aaac132b824354c3, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6526462, guid: f93aa514824303a4aaac132b824354c3, type: 2}
       propertyPath: m_IsTrigger
@@ -16855,7 +16855,7 @@ Transform:
   - {fileID: 1714534618}
   - {fileID: 997141618}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 12
 --- !u!1001 &1100157423
 Prefab:
   m_ObjectHideFlags: 0
@@ -18311,7 +18311,7 @@ Transform:
   - {fileID: 821645846}
   - {fileID: 1223448430}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
 --- !u!1 &1187375478
 GameObject:
   m_ObjectHideFlags: 0
@@ -20877,7 +20877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485094, guid: 2d67c05298217844a8b5cfe86ad78cc6, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 485094, guid: 2d67c05298217844a8b5cfe86ad78cc6, type: 2}
       propertyPath: m_LocalScale.x
@@ -21533,7 +21533,7 @@ Transform:
   - {fileID: 1658328083}
   - {fileID: 33257840}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!1 &1364344791
 GameObject:
   m_ObjectHideFlags: 0
@@ -21910,7 +21910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 8
 --- !u!1 &1413784898
 GameObject:
   m_ObjectHideFlags: 0
@@ -22539,7 +22539,7 @@ Transform:
   - {fileID: 1318382273}
   - {fileID: 811149389}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 11
 --- !u!1 &1438790106
 GameObject:
   m_ObjectHideFlags: 0
@@ -25074,7 +25074,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 426460, guid: f93aa514824303a4aaac132b824354c3, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6526462, guid: f93aa514824303a4aaac132b824354c3, type: 2}
       propertyPath: m_IsTrigger
@@ -29189,7 +29189,7 @@ Transform:
   - {fileID: 443696728}
   - {fileID: 2048557038}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
 --- !u!1 &1870547152
 GameObject:
   m_ObjectHideFlags: 0
@@ -31223,7 +31223,7 @@ Transform:
   - {fileID: 680177611}
   - {fileID: 124084495}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 7
 --- !u!1 &2042084011
 GameObject:
   m_ObjectHideFlags: 0

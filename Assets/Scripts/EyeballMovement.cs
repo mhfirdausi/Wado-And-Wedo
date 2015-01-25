@@ -55,6 +55,11 @@ public class EyeballMovement : MonoBehaviour {
 			Destroy (coll.gameObject);
 
 		}
+		else if(coll.gameObject.layer == 15)
+		{
+				gameManager.coinCollect();
+				Destroy(coll.gameObject);
+		}
 	}
 
 //	void OnTriggerEntered2D(Collider2D coll) {

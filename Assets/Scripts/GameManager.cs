@@ -4,7 +4,8 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	private static GameManager _instance;
-	private int score = 0;
+	private int curScore = 0;
+	private int totScore= 0;
 	private enum e_Scene
 	{
 		MAINMENU,
@@ -48,6 +49,8 @@ public class GameManager : MonoBehaviour {
 	}
 	public void callDeath()
 	{
+		curScore = 0;
+		Debug.Log(curScore);
 		Application.LoadLevel(Application.loadedLevel);
 	}
 	
@@ -61,7 +64,8 @@ public class GameManager : MonoBehaviour {
 	}
 	public void coinCollect()
 	{
-		score = score + 10;
+		curScore = curScore + 10;
+		Debug.Log(curScore);
 	}
 
 }

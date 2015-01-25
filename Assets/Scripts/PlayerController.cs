@@ -164,6 +164,7 @@ public class PlayerController : MonoBehaviour {
 		if (collision.gameObject.layer == 15)
 		{
 			gameManager.coinCollect();
+			Destroy(collision.gameObject);
 		}
 	}
 	public void startPlatformer()
