@@ -505,8 +505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  wadoDeaths: 2
-  wedoDeaths: 0
+  wadoDeaths: 5
+  wedoDeaths: 3
   wedoTotDeaths: 0
   wadoTotDeaths: 0
 --- !u!4 &24893052
@@ -22854,7 +22854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1004512329
 RectTransform:
   m_ObjectHideFlags: 0

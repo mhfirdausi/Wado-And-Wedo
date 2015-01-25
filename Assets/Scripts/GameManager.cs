@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour {
 		}
 		if (Input.GetButtonDown("Menu"))
 		{
-			returnToMenu();
+			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
 	public void callDeath()
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void returnToMenu()
 	{
-		Application.LoadLevel(0);
+		Application.LoadLevel(1);
 		Screen.showCursor = true;
 		curLevel = 1;
 		//curMusic.Stop();
