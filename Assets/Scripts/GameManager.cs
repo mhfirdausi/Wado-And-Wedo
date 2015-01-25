@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	
+		
 	private static GameManager _instance;
 	private int curScore = 0;
 	private int totScore= 0;
+	public bool isPaused = false;
+	public Canvas canvas;
 	private enum e_Scene
 	{
 		MAINMENU,
@@ -67,5 +69,15 @@ public class GameManager : MonoBehaviour {
 		curScore = curScore + 10;
 		Debug.Log(curScore);
 	}
-
+	public void pauseGame()
+	{
+		isPaused = true;
+		Time.timeScale = 0;
+		canvas.enabled = true;
+	}
+	public void resumeGame()
+	{
+		Time.timeScale = 1;
+		canvas.enabled = false;
+	}
 }

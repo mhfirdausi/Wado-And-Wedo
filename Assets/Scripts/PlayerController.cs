@@ -26,12 +26,6 @@ public class PlayerController : MonoBehaviour {
 	private bool isPlatformer = false;
 	private bool death;
 	private int tempJumps;
-	private enum e_state
-	{
-		NOPLAY,
-		PLATFORMER,
-		PUZZLE	
-	};
 	private int state;
 	
 	private PlayerPhysics playerPhysics;
@@ -62,6 +56,10 @@ public class PlayerController : MonoBehaviour {
 			}
 		}*/
 		 //Reset acceleration upon collision
+		if(Input.GetButtonDown("Pause"))
+		{
+			gameManager.pauseGame();
+		}
 		if(state != 0)
 		{
 			if(state == 2)
@@ -179,4 +177,5 @@ public class PlayerController : MonoBehaviour {
 	{
 		state = 0;
 	}
+	
 }
