@@ -160,6 +160,7 @@ public class PlayerController : MonoBehaviour {
 		if (collision.gameObject.layer == 10 || collision.gameObject.layer == 12) 
 		{
 			gameManager.callDeath();
+			gameManager.wadoDeaths++;
 		}
 		if (collision.gameObject.layer == 15)
 		{

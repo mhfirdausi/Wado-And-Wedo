@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour {
 	public bool isPaused = false;
 	public Canvas canvas;
 	public AudioClip levelOneMusic;
-	public AudioClip levelTwoMusic; 
+	public AudioClip levelTwoMusic;
+	public int wadoDeaths = 0;
+	public int wedoDeaths = 0;
 	private enum e_Scene
 	{
 		MAINMENU,
@@ -84,6 +86,8 @@ public class GameManager : MonoBehaviour {
 	}
 	public void instrScreen()
 	{
+		wadoDeaths = 0;
+		wedoDeaths = 0;
 		Application.LoadLevel(2);
 	}
 }

@@ -46,6 +46,7 @@ public class EyeballMovement : MonoBehaviour {
 		//Debug.Log ("Hit "+ coll.gameObject.tag);
 		if ((coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) && gameStarted != false) {
 			gameManager.callDeath();
+			gameManager.wedoDeaths++;
 		}
 
 		if (coll.gameObject.layer == 14) {
