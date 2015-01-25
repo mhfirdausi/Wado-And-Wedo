@@ -109,7 +109,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 7a8601a8dedece044b2414ea7b0c3f76, type: 3}
       m_Size: 128
   - m_BuildTarget: Standalone
     m_Icons:
@@ -119,11 +119,11 @@ PlayerSettings:
       m_Size: 512
     - m_Icon: {fileID: 0}
       m_Size: 256
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 7a8601a8dedece044b2414ea7b0c3f76, type: 3}
       m_Size: 128
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 0a6d9b6f07913fd4da165ea482d97537, type: 3}
       m_Size: 48
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 88a7b75de6e677c459cecd191928d349, type: 3}
       m_Size: 32
     - m_Icon: {fileID: 0}
       m_Size: 16
