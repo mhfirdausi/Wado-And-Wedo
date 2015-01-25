@@ -4,7 +4,19 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	private static GameManager _instance;
-
+	
+	private enum e_Scene
+	{
+		MAINMENU,
+		LEVEL1,
+		PUZZLE1,
+		LEVEL2,
+		PUZZLE2,
+		LEVEL3,
+		PUZZLE3
+	};
+	
+	
 	public static GameManager instance 
 	{
 		get 
@@ -37,5 +49,14 @@ public class GameManager : MonoBehaviour {
 	public void callDeath()
 	{
 		Application.LoadLevel(Application.loadedLevel);
+	}
+	
+	public void startGame()
+	{
+		Application.LoadLevel(1);
+	}
+	public void quit()
+	{
+		Application.Quit();
 	}
 }
