@@ -10,8 +10,11 @@ public class GameManager : MonoBehaviour {
 	public Canvas canvas;
 	public AudioClip levelOneMusic;
 	public AudioClip levelTwoMusic;
+	[HideInInspector]
 	public int wadoDeaths = 0;
 	public int wedoDeaths = 0;
+	public int wedoTotDeaths = 0;
+	public int wadoTotDeaths = 0;
 	private enum e_Scene
 	{
 		MAINMENU,
@@ -88,6 +91,30 @@ public class GameManager : MonoBehaviour {
 	{
 		wadoDeaths = 0;
 		wedoDeaths = 0;
+		wedoTotDeaths = 0;
+		wadoTotDeaths = 0;
 		Application.LoadLevel(2);
+	}
+	public void endScreenOne()
+	{
+		wedoTotDeaths = wedoDeaths;
+		wadoTotDeaths = wadoDeaths;
+		Application.LoadLevel(3);
+	}
+	public void startLevelTwo()
+	{
+		wadoDeaths = 0;
+		wedoDeaths = 0;
+		Application.LoadLevel(4);
+	}
+	public void endScreenTwo()
+	{
+		wedoTotDeaths += wedoDeaths;
+		wadoTotDeaths += wadoTotDeaths;
+		Application.LoadLevel(5);
+	}
+	public void returnToMenu()
+	{
+		Application.LoadLevel(0);
 	}
 }
