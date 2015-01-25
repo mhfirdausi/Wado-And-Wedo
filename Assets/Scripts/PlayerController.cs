@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collision){
 		//Debug.Log ("Collided");
-		if (collision.gameObject.layer == 10) 
+		if (collision.gameObject.layer == 10 || collision.gameObject.layer == 12) 
 		{
 			gameManager.callDeath();
 		}
