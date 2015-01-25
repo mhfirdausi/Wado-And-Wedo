@@ -160,6 +160,10 @@ public class PlayerController : MonoBehaviour {
 		{
 			gameManager.callDeath();
 		}
+		if (collision.gameObject.layer == 15)
+		{
+			gameManager.coinCollect();
+		}
 	}
 	public void startPlatformer()
 	{

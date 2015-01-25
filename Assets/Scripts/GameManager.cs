@@ -4,7 +4,7 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 	
 	private static GameManager _instance;
-	
+	private int score = 0;
 	private enum e_Scene
 	{
 		MAINMENU,
@@ -58,6 +58,10 @@ public class GameManager : MonoBehaviour {
 	public void quit()
 	{
 		Application.Quit();
+	}
+	public void coinCollect()
+	{
+		score = score + 10;
 	}
 
 }
