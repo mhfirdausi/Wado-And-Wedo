@@ -353,6 +353,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 24893052}
   - 114: {fileID: 24893051}
+  - 82: {fileID: 24893053}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -372,8 +373,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abeab69dd9b517841b3e6d143086c9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPaused: 1
+  isPaused: 0
   canvas: {fileID: 0}
+  levelOneMusic: {fileID: 0}
+  levelTwoMusic: {fileID: 0}
 --- !u!4 &24893052
 Transform:
   m_ObjectHideFlags: 0
@@ -386,6 +389,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!82 &24893053
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 24893050}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &25517017
 Prefab:
   m_ObjectHideFlags: 0
@@ -439,7 +500,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 26177637}
   - 212: {fileID: 26177639}
-  - 61: {fileID: 26177638}
+  - 65: {fileID: 26177638}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -459,18 +520,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1901355076}
   m_RootOrder: 5
---- !u!61 &26177638
-BoxCollider2D:
+--- !u!65 &26177638
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107500, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551626, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 26177636}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &26177639
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -633,7 +695,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 36228574}
   - 212: {fileID: 36228573}
-  - 61: {fileID: 36228572}
+  - 65: {fileID: 36228572}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -641,18 +703,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &36228572
-BoxCollider2D:
+--- !u!65 &36228572
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107502, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551628, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 36228571}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &36228573
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -687,7 +750,7 @@ Transform:
   m_LocalScale: {x: 1.02499998, y: .850000024, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &39515145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2528,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 102774842}
   - 212: {fileID: 102774844}
-  - 61: {fileID: 102774843}
+  - 65: {fileID: 102774843}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -2484,19 +2547,20 @@ Transform:
   m_LocalScale: {x: 1, y: .849999905, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 0
---- !u!61 &102774843
-BoxCollider2D:
+  m_RootOrder: 5
+--- !u!65 &102774843
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107510, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551622, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 102774841}
-  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &102774844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2529,7 +2593,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 105080127}
   - 212: {fileID: 105080129}
-  - 61: {fileID: 105080128}
+  - 65: {fileID: 105080128}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -2548,19 +2612,20 @@ Transform:
   m_LocalScale: {x: 1.24890637, y: .850000024, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 5
---- !u!61 &105080128
-BoxCollider2D:
+  m_RootOrder: 4
+--- !u!65 &105080128
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107500, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551626, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 105080126}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &105080129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2750,7 +2815,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 121195050}
   - 212: {fileID: 121195052}
-  - 61: {fileID: 121195051}
+  - 65: {fileID: 121195051}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -2770,18 +2835,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938545315}
   m_RootOrder: 3
---- !u!61 &121195051
-BoxCollider2D:
+--- !u!65 &121195051
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107504, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551630, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 121195049}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &121195052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3310,12 +3376,12 @@ Transform:
   m_LocalPosition: {x: 174.520004, y: -1.48000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 102774842}
   - {fileID: 575948526}
   - {fileID: 758403200}
   - {fileID: 1109554100}
   - {fileID: 36228574}
   - {fileID: 105080127}
+  - {fileID: 102774842}
   m_Father: {fileID: 0}
   m_RootOrder: 13
 --- !u!1001 &161990490
@@ -11000,7 +11066,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 575948526}
   - 212: {fileID: 575948528}
-  - 61: {fileID: 575948527}
+  - 65: {fileID: 575948527}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -11019,19 +11085,20 @@ Transform:
   m_LocalScale: {x: 1, y: .850000024, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 1
---- !u!61 &575948527
-BoxCollider2D:
+  m_RootOrder: 0
+--- !u!65 &575948527
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107508, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551620, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 575948525}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &575948528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13390,6 +13457,10 @@ Prefab:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: df12d5f88b975634f887dd89879c984d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
   m_RootGameObject: {fileID: 1455158100}
@@ -14203,7 +14274,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 758403200}
   - 212: {fileID: 758403202}
-  - 61: {fileID: 758403201}
+  - 65: {fileID: 758403201}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -14222,19 +14293,20 @@ Transform:
   m_LocalScale: {x: 1, y: .850000024, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 2
---- !u!61 &758403201
-BoxCollider2D:
+  m_RootOrder: 1
+--- !u!65 &758403201
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107506, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551624, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 758403199}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &758403202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15918,6 +15990,26 @@ Prefab:
     - target: {fileID: 407510, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
       propertyPath: m_LocalScale.x
       value: .899859309
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
@@ -17802,7 +17894,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 909247573}
   - 212: {fileID: 909247575}
-  - 61: {fileID: 909247574}
+  - 65: {fileID: 909247574}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -17822,18 +17914,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1901355076}
   m_RootOrder: 2
---- !u!61 &909247574
-BoxCollider2D:
+--- !u!65 &909247574
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107506, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551624, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 909247572}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &909247575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18997,7 +19090,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 961999199}
   - 212: {fileID: 961999201}
-  - 61: {fileID: 961999200}
+  - 65: {fileID: 961999200}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -19017,18 +19110,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938545315}
   m_RootOrder: 0
---- !u!61 &961999200
-BoxCollider2D:
+--- !u!65 &961999200
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107510, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551622, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 961999198}
-  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &961999201
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21245,7 +21339,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1060636420}
   - 212: {fileID: 1060636419}
-  - 61: {fileID: 1060636418}
+  - 65: {fileID: 1060636418}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -21253,18 +21347,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1060636418
-BoxCollider2D:
+--- !u!65 &1060636418
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107510, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551622, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 1060636417}
-  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1060636419
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21964,7 +22059,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1109554100}
   - 212: {fileID: 1109554102}
-  - 61: {fileID: 1109554101}
+  - 65: {fileID: 1109554101}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -21983,19 +22078,20 @@ Transform:
   m_LocalScale: {x: 1, y: .850000024, z: 1}
   m_Children: []
   m_Father: {fileID: 159083042}
-  m_RootOrder: 3
---- !u!61 &1109554101
-BoxCollider2D:
+  m_RootOrder: 2
+--- !u!65 &1109554101
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107504, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551630, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 1279555509}
   m_GameObject: {fileID: 1109554099}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1109554102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24338,7 +24434,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1255658745}
   - 212: {fileID: 1255658747}
-  - 61: {fileID: 1255658746}
+  - 65: {fileID: 1255658746}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -24358,18 +24454,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1901355076}
   m_RootOrder: 1
---- !u!61 &1255658746
-BoxCollider2D:
+--- !u!65 &1255658746
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107508, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551620, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 1255658744}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1255658747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24846,6 +24943,50 @@ Prefab:
     - target: {fileID: 407510, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
       propertyPath: m_RootOrder
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407512, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 407502, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 407500, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 407508, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407506, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407504, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50fda0e876211594e9e5f7141882ae8b, type: 2}
@@ -27274,7 +27415,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1430090998}
   - 212: {fileID: 1430091000}
-  - 61: {fileID: 1430090999}
+  - 65: {fileID: 1430090999}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -27294,18 +27435,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938545315}
   m_RootOrder: 1
---- !u!61 &1430090999
-BoxCollider2D:
+--- !u!65 &1430090999
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107508, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551620, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 1430090997}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1430091000
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27836,6 +27978,7 @@ GameObject:
   - 114: {fileID: 1455158103}
   - 114: {fileID: 1455158102}
   - 54: {fileID: 1455158101}
+  - 82: {fileID: 1455158107}
   m_Layer: 9
   m_Name: testPlayer
   m_TagString: Untagged
@@ -27895,6 +28038,7 @@ MonoBehaviour:
   hasDoubleJump: 1
   cutJumpSpeed: 7
   gameManager: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
+  jumpSound: {fileID: 8300000, guid: df12d5f88b975634f887dd89879c984d, type: 3}
 --- !u!65 &1455158104
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27943,6 +28087,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!82 &1455158107
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455158100}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1456708325
 GameObject:
   m_ObjectHideFlags: 0
@@ -33533,7 +33735,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1738820043}
   - 212: {fileID: 1738820045}
-  - 61: {fileID: 1738820044}
+  - 65: {fileID: 1738820044}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -33553,18 +33755,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938545315}
   m_RootOrder: 2
---- !u!61 &1738820044
-BoxCollider2D:
+--- !u!65 &1738820044
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107506, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551624, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 1738820042}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1738820045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -34584,7 +34787,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1777768546}
   - 212: {fileID: 1777768548}
-  - 61: {fileID: 1777768547}
+  - 65: {fileID: 1777768547}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -34604,18 +34807,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1901355076}
   m_RootOrder: 3
---- !u!61 &1777768547
-BoxCollider2D:
+--- !u!65 &1777768547
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107504, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551630, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 1777768545}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1777768548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37497,7 +37701,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1953733728}
   - 212: {fileID: 1953733730}
-  - 61: {fileID: 1953733729}
+  - 65: {fileID: 1953733729}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -37517,18 +37721,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938545315}
   m_RootOrder: 4
---- !u!61 &1953733729
-BoxCollider2D:
+--- !u!65 &1953733729
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107502, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551628, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 1953733727}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1953733730
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -37626,7 +37831,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1963660474}
   - 212: {fileID: 1963660476}
-  - 61: {fileID: 1963660475}
+  - 65: {fileID: 1963660475}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -37646,18 +37851,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1901355076}
   m_RootOrder: 4
---- !u!61 &1963660475
-BoxCollider2D:
+--- !u!65 &1963660475
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107502, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551628, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 822012902}
   m_GameObject: {fileID: 1963660473}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1963660476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -38917,7 +39123,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2026261058}
   - 212: {fileID: 2026261057}
-  - 61: {fileID: 2026261056}
+  - 65: {fileID: 2026261056}
   m_Layer: 10
   m_Name: Lava_Tile_Top
   m_TagString: Untagged
@@ -38925,18 +39131,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &2026261056
-BoxCollider2D:
+--- !u!65 &2026261056
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6107500, guid: 50fda0e876211594e9e5f7141882ae8b,
+  m_PrefabParentObject: {fileID: 6551626, guid: 50fda0e876211594e9e5f7141882ae8b,
     type: 2}
   m_PrefabInternal: {fileID: 250088031}
   m_GameObject: {fileID: 2026261055}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 2.07999992, y: 1.15999997}
-  m_Center: {x: 0, y: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &2026261057
 SpriteRenderer:
   m_ObjectHideFlags: 0
