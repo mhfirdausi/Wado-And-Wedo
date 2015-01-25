@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour {
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
 		death = false;
 		state = 0;
-
+		transform.eulerAngles = Vector3.up * 180;
+		
 		//animator = GetComponent<Animator>();
 	}
 	
