@@ -818,7 +818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!65 &47857723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4310,8 +4310,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+<<<<<<< HEAD
 --- !u!65 &338584844
 BoxCollider:
+=======
+--- !u!50 &338584844
+Rigidbody2D:
+>>>>>>> origin/master
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -13332,7 +13337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!65 &895012433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13639,7 +13644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!65 &906652260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15686,7 +15691,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!65 &1033332553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17794,7 +17799,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!65 &1171516963
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20880,7 +20885,7 @@ Transform:
   m_LocalScale: {x: 1.76343799, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!65 &1321944753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22628,7 +22633,6 @@ Transform:
   - {fileID: 91047037}
   - {fileID: 1982486325}
   - {fileID: 1150721353}
-  - {fileID: 1625301206}
   - {fileID: 895012432}
   - {fileID: 906652259}
   - {fileID: 1171516962}
@@ -22636,6 +22640,7 @@ Transform:
   - {fileID: 1033332552}
   - {fileID: 1954880671}
   - {fileID: 1321944752}
+  - {fileID: 1625301206}
   m_Father: {fileID: 1095751514}
   m_RootOrder: 1
 --- !u!1001 &1467209569
@@ -25364,11 +25369,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1625301205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .899999976, y: 0, z: 0}
+  m_LocalPosition: {x: .900001526, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 5
+  m_RootOrder: 12
 --- !u!65 &1625301207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30185,7 +30190,7 @@ Transform:
   m_LocalScale: {x: 1.13750017, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1464775861}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!65 &1954880672
 BoxCollider:
   m_ObjectHideFlags: 0
