@@ -4310,13 +4310,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-<<<<<<< HEAD
 --- !u!65 &338584844
 BoxCollider:
-=======
 --- !u!50 &338584844
 Rigidbody2D:
->>>>>>> origin/master
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
