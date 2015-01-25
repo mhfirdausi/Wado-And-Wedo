@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 	private static GameManager _instance;
 	private int curScore = 0;
 	private int totScore= 0;
+	private int curLevel = 0;
 	public bool isPaused = false;
 	public Canvas canvas;
 	public AudioClip levelOneMusic;
@@ -15,16 +16,7 @@ public class GameManager : MonoBehaviour {
 	public int wedoDeaths = 0;
 	public int wedoTotDeaths = 0;
 	public int wadoTotDeaths = 0;
-	private enum e_Scene
-	{
-		MAINMENU,
-		LEVEL1,
-		PUZZLE1,
-		LEVEL2,
-		PUZZLE2,
-		LEVEL3,
-		PUZZLE3
-	};
+
 	
 	
 	public static GameManager instance 
@@ -56,6 +48,33 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
+	void Update()
+	{
+		if(Input.GetButtonDown("SkipLevel"))
+		{
+			switch(curLevel)
+			{
+				case 0:
+					instrScreen();
+					break;
+				case 1:
+					startGame();
+					break;
+				case 2:
+					endScreenOne();
+					break;
+				case 3:
+					startLevelTwo();
+					break;
+				case 4:
+					endScreenTwo();
+					break;
+				case 5:
+					returnToMenu();
+					break;
+			}
+		}
+	}
 	public void callDeath()
 	{
 		curScore = 0;
@@ -65,7 +84,8 @@ public class GameManager : MonoBehaviour {
 	
 	public void startGame()
 	{
-		Application.LoadLevel(1);
+		Application.LoadLevel(2);
+		curLevel = 2;
 	}
 	public void quit()
 	{
@@ -76,12 +96,14 @@ public class GameManager : MonoBehaviour {
 		curScore = curScore + 10;
 		Debug.Log(curScore);
 	}
+	/*
 	public void pauseGame()
 	{
 		isPaused = true;
 		Time.timeScale = 0;
 		canvas.enabled = true;
 	}
+	*/
 	public void resumeGame()
 	{
 		Time.timeScale = 1;
@@ -93,28 +115,36 @@ public class GameManager : MonoBehaviour {
 		wedoDeaths = 0;
 		wedoTotDeaths = 0;
 		wadoTotDeaths = 0;
-		Application.LoadLevel(2);
+		curLevel = 1;
+		Application.LoadLevel(1);
+		Screen.showCursor = false;
 	}
 	public void endScreenOne()
 	{
 		wedoTotDeaths = wedoDeaths;
 		wadoTotDeaths = wadoDeaths;
 		Application.LoadLevel(3);
+		curLevel = 3;
 	}
 	public void startLevelTwo()
 	{
 		wadoDeaths = 0;
 		wedoDeaths = 0;
 		Application.LoadLevel(4);
+		curLevel = 4;
 	}
 	public void endScreenTwo()
 	{
 		wedoTotDeaths += wedoDeaths;
 		wadoTotDeaths += wadoTotDeaths;
 		Application.LoadLevel(5);
+		curLevel = 5;
 	}
 	public void returnToMenu()
 	{
 		Application.LoadLevel(0);
+		Screen.showCursor = true;
+		curLevel = 0;
 	}
+	
 }

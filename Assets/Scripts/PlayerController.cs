@@ -57,10 +57,10 @@ public class PlayerController : MonoBehaviour {
 			}
 		}*/
 		 //Reset acceleration upon collision
-		if(Input.GetButtonDown("Pause"))
+		/*if(Input.GetButtonDown("Pause"))
 		{
-			gameManager.pauseGame();
-		}
+			
+		}*/
 		if(state != 0)
 		{
 			if(state == 2)
