@@ -5,11 +5,12 @@ public class placeMouseHere : MonoBehaviour {
 
 	public PlayerController player;
 	public EyeballMovement eyeball;
+	public bool isPuzzle = false;
 	private bool isEntered = false;
+	
 	
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -34,7 +35,14 @@ public class placeMouseHere : MonoBehaviour {
 		//Debug.Log ("Yield: " + isEntered);
 		if(isEntered == true)
 		{
-			player.startPlatformer();
+			if(!isPuzzle)
+			{
+				player.startPlatformer();
+			}
+			else
+			{
+				player.startPuzzle();
+			}
 		}
 	}
 }
