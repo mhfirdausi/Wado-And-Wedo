@@ -46,6 +46,9 @@ public class EyeballMovement : MonoBehaviour {
 		if (coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) {
 			gameManager.callDeath();
 		}
+		else if (coll.gameObject.layer == 12) {
+			Destroy (coll.gameObject);
+		}
 	}
 
 //	void OnTriggerEntered2D(Collider2D coll) {
