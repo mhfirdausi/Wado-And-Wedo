@@ -26,7 +26,13 @@ public class PlayerController : MonoBehaviour {
 	private bool isPlatformer = false;
 	private bool death;
 	private int tempJumps;
-
+	private enum e_state
+	{
+		NOPLAY,
+		PLATFORMER,
+		PUZZLE	
+	};
+	private int state;
 	
 	private PlayerPhysics playerPhysics;
 	//private Animator animator;
@@ -36,12 +42,14 @@ public class PlayerController : MonoBehaviour {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
 		death = false;
+		state = 0;
 
 		//animator = GetComponent<Animator>();
 	}
 	
 	void Update () {
 		//Debug.Log(jumps);
+		/*
 		if (Input.GetButtonDown ("Run")) {
 			if (isPlatformer) 
 			{
@@ -51,70 +59,73 @@ public class PlayerController : MonoBehaviour {
 			{
 				isPlatformer = true;
 			}
-		}
+		}*/
 		 //Reset acceleration upon collision
-		if(!isPlatformer)
-		{	
-			if (playerPhysics.movementStopped) {
-				targetSpeed = 0;
-				currentSpeed = 0;
-			}
-		}
-		
-		// If player is touching the ground
-		if (playerPhysics.grounded) 
+		if(state != 0)
 		{
-
-			amountToMove.y = 0;
-			isJumping = false;
-			if(tempJumps == jumps)
+			if(state == 2)
+			{	
+				if (playerPhysics.movementStopped) {
+					targetSpeed = 0;
+					currentSpeed = 0;
+				}
+			}
+			
+			// If player is touching the ground
+			if (playerPhysics.grounded) 
 			{
-				resetJumps();
+	
+				amountToMove.y = 0;
+				isJumping = false;
+				if(tempJumps == jumps)
+				{
+					resetJumps();
+				}
+				tempJumps = jumps;
+				
 			}
-			tempJumps = jumps;
+			if (!isJumping && !playerPhysics.grounded)
+			{
+				jumps--;
+			}
+				
+				// Jump
+			if (Input.GetButtonDown("Jump") && jumps > 0) 
+			{
+				amountToMove.y = jumpHeight;
+				isJumping = true;
+				jumps--;
+			}
+	
+			if (Input.GetButtonUp("Jump") && isJumping && amountToMove.y > cutJumpSpeedLimit) 
+			{
+				Debug.Log("Entered");
+				amountToMove.y = cutJumpSpeedLimit;
+			}
 			
-		}
-		if (!isJumping && !playerPhysics.grounded)
-		{
-			jumps--;
-		}
+			// Set animator parameters
+			//animationSpeed = IncrementTowards(animationSpeed,Mathf.Abs(targetSpeed),acceleration);
+			//animator.SetFloat("Speed",animationSpeed);
 			
-			// Jump
-		if (Input.GetButtonDown("Jump") && jumps > 0) 
-		{
-			amountToMove.y = jumpHeight;
-			isJumping = true;
-			jumps--;
-		}
-
-		if (Input.GetButtonUp("Jump") && isJumping && amountToMove.y > cutJumpSpeedLimit) 
-		{
-			Debug.Log("Entered");
-			amountToMove.y = cutJumpSpeedLimit;
-		}
-		
-		// Set animator parameters
-		//animationSpeed = IncrementTowards(animationSpeed,Mathf.Abs(targetSpeed),acceleration);
-		//animator.SetFloat("Speed",animationSpeed);
-		
-		// Input
-		if (isPlatformer) {
-			currentSpeed = speed;
-		} 
-		else {
-			targetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
-			currentSpeed = IncrementTowards (currentSpeed, targetSpeed, acceleration);
-		}
-
-		// Set amount to move
-		amountToMove.x = currentSpeed;
-		amountToMove.y -= gravity * Time.deltaTime;
-		playerPhysics.Move(amountToMove * Time.deltaTime);
-		
-		// Face Direction
-		float moveDir = Input.GetAxisRaw("Horizontal");
-		if (moveDir !=0) {
-			transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
+			// Input
+			if (state == 1) {
+				currentSpeed = speed;
+			} 
+			else {
+				targetSpeed = Input.GetAxisRaw ("Horizontal") * speed;
+				currentSpeed = IncrementTowards (currentSpeed, targetSpeed, acceleration);
+			}
+	
+			// Set amount to move
+			amountToMove.x = currentSpeed;
+			amountToMove.y -= gravity * Time.deltaTime;
+			playerPhysics.Move(amountToMove * Time.deltaTime);
+			
+			// Face Direction
+			float moveDir = Input.GetAxisRaw("Horizontal");
+			if (moveDir !=0 && state == 2) {
+				transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
+			}
 		}
 
 	}
@@ -149,5 +160,17 @@ public class PlayerController : MonoBehaviour {
 		{
 			gameManager.callDeath();
 		}
+	}
+	public void startPlatformer()
+	{
+		state = 1;
+	}
+	public void startPuzzle()
+	{
+		state = 2;
+	}
+	public void stopPlay()
+	{
+		state = 0;
 	}
 }

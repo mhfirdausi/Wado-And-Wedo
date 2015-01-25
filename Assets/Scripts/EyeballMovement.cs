@@ -5,6 +5,7 @@ public class EyeballMovement : MonoBehaviour {
 	private Vector3 mousePosition;
 	public GameManager gameManager;
 	public float moveSpeed = .5f;
+	public bool gameStarted = true;
 	
 
 	// Use this for initialization
@@ -42,9 +43,13 @@ public class EyeballMovement : MonoBehaviour {
 	 */
 	void OnTriggerEnter(Collider coll) 
 	{
-		Debug.Log ("Hit "+ coll.gameObject.tag);
-		if (coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) {
+		//Debug.Log ("Hit "+ coll.gameObject.tag);
+		if ((coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) && gameStarted != false) {
 			gameManager.callDeath();
+		}
+		if (coll.gameObject.layer == 14)
+		{
+			gameStarted = true;
 		}
 	}
 
