@@ -47,14 +47,13 @@ public class EyeballMovement : MonoBehaviour {
 		if ((coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) && gameStarted != false) {
 			gameManager.callDeath();
 		}
-<<<<<<< HEAD
-		if (coll.gameObject.layer == 14)
-		{
+
+		if (coll.gameObject.layer == 14) {
 			gameStarted = true;
-=======
+		}
 		else if (coll.gameObject.layer == 12) {
 			Destroy (coll.gameObject);
->>>>>>> origin/master
+
 		}
 	}
 
