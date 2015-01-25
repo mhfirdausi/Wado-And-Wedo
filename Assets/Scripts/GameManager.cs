@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour {
 	public void startGame()
 	{
 		Application.LoadLevel(1);
+		audio.Play();
 	}
 	public void quit()
 	{
