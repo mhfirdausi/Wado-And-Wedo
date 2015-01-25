@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour {
 		PUZZLE	
 	};
 	private int state;
-	
+	float moveDir;
 	private PlayerPhysics playerPhysics;
 	//private Animator animator;
 	
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
 		death = false;
+		transform.eulerAngles = (Vector3.up * 180);
 		state = 0;
 
 		//animator = GetComponent<Animator>();
@@ -122,7 +123,7 @@ public class PlayerController : MonoBehaviour {
 			playerPhysics.Move(amountToMove * Time.deltaTime);
 			
 			// Face Direction
-			float moveDir = Input.GetAxisRaw("Horizontal");
+			moveDir = Input.GetAxisRaw("Horizontal");
 			if (moveDir !=0 && state == 2) {
 				transform.eulerAngles = (moveDir>0)?Vector3.up * 180:Vector3.zero;
 			}
