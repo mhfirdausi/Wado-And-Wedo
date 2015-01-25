@@ -375,8 +375,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
-  levelTwoMusic: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
+  levelOneMusic: {fileID: 0}
+  levelTwoMusic: {fileID: 0}
 --- !u!4 &24893052
 Transform:
   m_ObjectHideFlags: 0
@@ -10821,14 +10821,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
-      propertyPath: levelOneMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
-    - target: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
-      propertyPath: levelTwoMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
   m_RootGameObject: {fileID: 24893050}
