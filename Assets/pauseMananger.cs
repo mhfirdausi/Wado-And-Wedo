@@ -4,9 +4,11 @@ using UnityEngine.UI;
 
 public class pauseMananger : MonoBehaviour {
 	public GameManager gameManager;
+	Canvas canvas;
 	
 	// Use this for initialization
 	void Start () {
+	//canvas = gameObject.GetComponent<Canvas>;
 	
 	}
 	
@@ -14,12 +16,10 @@ public class pauseMananger : MonoBehaviour {
 	void Update () {
 		if(gameManager.isPaused)
 		{
-			gameObject.SetActive(true);
 
 		}
 		else
 		{
-			gameObject.SetActive(false);
 		}
 		
 	}
