@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	private float cutJumpSpeedLimit;
 	private bool isPlatformer = false;
 	private bool death;
+	private int tempJumps;
 
 	
 	private PlayerPhysics playerPhysics;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+		Debug.Log(jumps);
 		if (Input.GetButtonDown ("Run")) {
 			if (isPlatformer) 
 			{
@@ -62,13 +64,23 @@ public class PlayerController : MonoBehaviour {
 		// If player is touching the ground
 		if (playerPhysics.grounded) 
 		{
+
 			amountToMove.y = 0;
 			isJumping = false;
-			resetJumps();
+			if(tempJumps == jumps)
+			{
+				resetJumps();
+			}
+			tempJumps = jumps;
+			
+		}
+		if (!isJumping && !playerPhysics.grounded)
+		{
+			jumps--;
 		}
 			
 			// Jump
-		if (Input.GetButtonDown("Jump") && jumps != 0) 
+		if (Input.GetButtonDown("Jump") && jumps > 0) 
 		{
 			amountToMove.y = jumpHeight;
 			isJumping = true;
