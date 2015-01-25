@@ -980,7 +980,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2082126771}
   - 114: {fileID: 2082126770}
-  - 82: {fileID: 2082126772}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1002,9 +1001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
-  levelTwoMusic: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
-  wadoDeaths: 1
+  wadoDeaths: 0
   wedoDeaths: 0
   wedoTotDeaths: 0
   wadoTotDeaths: 0
@@ -1020,64 +1017,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!82 &2082126772
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2082126769}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!1 &2086150672
 GameObject:
   m_ObjectHideFlags: 0

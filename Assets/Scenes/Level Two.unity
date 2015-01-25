@@ -505,10 +505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 0}
-  levelTwoMusic: {fileID: 0}
-  wadoDeaths: 41
-  wedoDeaths: 72
+  wadoDeaths: 0
+  wedoDeaths: 0
+  wedoTotDeaths: 0
+  wadoTotDeaths: 0
 --- !u!4 &24893052
 Transform:
   m_ObjectHideFlags: 0
@@ -42173,6 +42173,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1920547077}
   - 212: {fileID: 1920547076}
+  - 65: {fileID: 1920547079}
+  - 114: {fileID: 1920547078}
   m_Layer: 0
   m_Name: Door_Open_Dark_Top_Round_Half
   m_TagString: Untagged
@@ -42214,6 +42216,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1920547078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920547075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d41664340371544942b37d4487ffdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 24893051}
+--- !u!65 &1920547079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920547075}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.27999997, y: 1.49000001, z: .200000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1920582627
 Prefab:
   m_ObjectHideFlags: 0
