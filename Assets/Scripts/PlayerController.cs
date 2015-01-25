@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 		playerPhysics = GetComponent<PlayerPhysics>();
 		cutJumpSpeedLimit = gravity / cutJumpSpeed;
 		death = false;
-		state = 1;
+		state = 0;
 
 		//animator = GetComponent<Animator>();
 	}
