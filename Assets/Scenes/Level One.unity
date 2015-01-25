@@ -1330,7 +1330,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 281.5, y: 211}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &77539443
 MonoBehaviour:
@@ -13254,7 +13254,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 281.5, y: 181}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &757019046
 MonoBehaviour:
@@ -19251,6 +19251,14 @@ Prefab:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1406515546}
+    - target: {fileID: 22474722, guid: 1a53e678c45c93d4abbb24af870009b4, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 22474726, guid: 1a53e678c45c93d4abbb24af870009b4, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a53e678c45c93d4abbb24af870009b4, type: 2}
   m_RootGameObject: {fileID: 656250722}
@@ -27080,8 +27088,8 @@ MonoBehaviour:
   canvas: {fileID: 0}
   levelOneMusic: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
   levelTwoMusic: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
-  wadoDeaths: 2
-  wedoDeaths: 3
+  wadoDeaths: 4
+  wedoDeaths: 17
 --- !u!4 &1406515547
 Transform:
   m_ObjectHideFlags: 0
