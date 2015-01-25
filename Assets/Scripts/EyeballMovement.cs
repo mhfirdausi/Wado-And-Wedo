@@ -6,7 +6,7 @@ public class EyeballMovement : MonoBehaviour {
 	public GameManager gameManager;
 	public float moveSpeed = .5f;
 	public bool gameStarted = true;
-	
+	public AudioClip boopClip;
 
 	// Use this for initialization
 	void Start () {
@@ -53,7 +53,7 @@ public class EyeballMovement : MonoBehaviour {
 		}
 		else if (coll.gameObject.layer == 12) {
 			Destroy (coll.gameObject);
-
+			audio.PlayOneShot(boopClip);
 		}
 		else if(coll.gameObject.layer == 15)
 		{
