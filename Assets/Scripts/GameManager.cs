@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
 	private int totScore= 0;
 	public bool isPaused = false;
 	public Canvas canvas;
+	public AudioClip levelOneMusic;
+	public AudioClip levelTwoMusic; 
 	private enum e_Scene
 	{
 		MAINMENU,

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	private bool death;
 	private int tempJumps;
 	private int state;
+	public AudioClip jumpSound;
 	
 	private PlayerPhysics playerPhysics;
 	//private Animator animator;
@@ -94,6 +95,7 @@ public class PlayerController : MonoBehaviour {
 				amountToMove.y = jumpHeight;
 				isJumping = true;
 				jumps--;
+				audio.PlayOneShot(jumpSound);
 			}
 	
 			if (Input.GetButtonUp("Jump") && isJumping && amountToMove.y > cutJumpSpeedLimit) 

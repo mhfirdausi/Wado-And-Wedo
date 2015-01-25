@@ -24,11 +24,12 @@ public class TriggeredItemMovement : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		Debug.Log (coll.gameObject.name + " triggered " + this.gameObject.name);
-		AudioSource.PlayClipAtPoint(Blop, transform.position);
+		audio.PlayOneShot(Blop);
+		
 	}
 	
 	void OnTriggerExit2D(Collider2D coll) {
 		Debug.Log (coll.gameObject.name + " exited " + this.gameObject.name);
-		AudioSource.PlayClipAtPoint(Jump, transform.position);
+		audio.PlayOneShot(Jump);
 	}
 }

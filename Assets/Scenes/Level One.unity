@@ -3244,6 +3244,14 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1946144621}
+    - target: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
+      propertyPath: levelOneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
+    - target: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
+      propertyPath: levelTwoMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
   m_RootGameObject: {fileID: 1406515545}
@@ -4742,6 +4750,7 @@ GameObject:
   - 114: {fileID: 300375398}
   - 114: {fileID: 300375397}
   - 54: {fileID: 300375402}
+  - 82: {fileID: 300375403}
   m_Layer: 9
   m_Name: testPlayer
   m_TagString: Untagged
@@ -4785,6 +4794,7 @@ MonoBehaviour:
   hasDoubleJump: 0
   cutJumpSpeed: 7
   gameManager: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
+  jumpSound: {fileID: 8300000, guid: df12d5f88b975634f887dd89879c984d, type: 3}
 --- !u!65 &300375399
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4849,6 +4859,64 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &300375403
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 300375396}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &301061741
 GameObject:
   m_ObjectHideFlags: 0
@@ -9589,6 +9657,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11465646, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: df12d5f88b975634f887dd89879c984d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70a834bf77c6d25469bf75c086a583aa, type: 2}
   m_RootGameObject: {fileID: 300375396}
@@ -11482,6 +11554,33 @@ Transform:
   - {fileID: 1451413746}
   m_Father: {fileID: 1869641332}
   m_RootOrder: 10
+--- !u!1 &678043825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 678043827}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678043827
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678043825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2085486491}
+  m_RootOrder: 0
 --- !u!1 &680177610
 GameObject:
   m_ObjectHideFlags: 0
@@ -26575,6 +26674,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1406515547}
   - 114: {fileID: 1406515546}
+  - 82: {fileID: 1406515548}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -26596,6 +26696,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 1946144621}
+  levelOneMusic: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
+  levelTwoMusic: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
 --- !u!4 &1406515547
 Transform:
   m_ObjectHideFlags: 0
@@ -26608,6 +26710,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
+--- !u!82 &1406515548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1406515545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1407497325
 GameObject:
   m_ObjectHideFlags: 0
@@ -39033,7 +39193,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 678043827}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!114 &2085486492
