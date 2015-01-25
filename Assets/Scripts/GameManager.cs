@@ -9,13 +9,14 @@ public class GameManager : MonoBehaviour {
 	private int curLevel = 0;
 	public bool isPaused = false;
 	public Canvas canvas;
-	public AudioClip levelOneMusic;
-	public AudioClip levelTwoMusic;
+	//public AudioClip levelOneMusic;
+	//public AudioClip levelTwoMusic;
 	[HideInInspector]
 	public int wadoDeaths = 0;
 	public int wedoDeaths = 0;
 	public int wedoTotDeaths = 0;
 	public int wadoTotDeaths = 0;
+	//private AudioSource curMusic;
 
 	
 	
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour {
 
 	void Awake()
 	{
+		//curMusic = gameObject.GetComponent<AudioSource>();
+		//audio.clip = levelOneMusic;
+		//curMusic.Pause();
 		if (_instance == null) 
 		{
 			_instance = this;
@@ -74,6 +78,10 @@ public class GameManager : MonoBehaviour {
 					break;
 			}
 		}
+		if (Input.GetButtonDown("Menu"))
+		{
+			returnToMenu();
+		}
 	}
 	public void callDeath()
 	{
@@ -84,8 +92,12 @@ public class GameManager : MonoBehaviour {
 	
 	public void startGame()
 	{
+		
 		Application.LoadLevel(2);
+		//audio.clip = levelOneMusic;
+		
 		curLevel = 2;
+		//audio.Play();
 	}
 	public void quit()
 	{
@@ -130,6 +142,7 @@ public class GameManager : MonoBehaviour {
 	{
 		wadoDeaths = 0;
 		wedoDeaths = 0;
+		//curMusic.clip = levelTwoMusic;
 		Application.LoadLevel(4);
 		curLevel = 4;
 	}
@@ -145,6 +158,7 @@ public class GameManager : MonoBehaviour {
 		Application.LoadLevel(0);
 		Screen.showCursor = true;
 		curLevel = 0;
+		//curMusic.Stop();
 	}
 	
 }

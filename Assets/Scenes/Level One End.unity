@@ -324,7 +324,6 @@ GameObject:
   - 224: {fileID: 915696233}
   - 222: {fileID: 915696236}
   - 114: {fileID: 915696235}
-  - 114: {fileID: 915696234}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -349,18 +348,6 @@ RectTransform:
   m_AnchoredPosition: {x: 262.5, y: -148}
   m_SizeDelta: {x: 94, y: 52}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &915696234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 915696232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e347ffb1506e5746b73f6a20ff36f3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 1697184839}
 --- !u!114 &915696235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,8 +642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 0}
-  levelTwoMusic: {fileID: 0}
   wadoDeaths: 0
   wedoDeaths: 0
   wedoTotDeaths: 0
@@ -684,6 +669,7 @@ GameObject:
   - 223: {fileID: 1701284367}
   - 114: {fileID: 1701284366}
   - 114: {fileID: 1701284365}
+  - 114: {fileID: 1701284368}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -767,6 +753,18 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1701284368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1701284363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e347ffb1506e5746b73f6a20ff36f3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1697184839}
 --- !u!1 &1776473670
 GameObject:
   m_ObjectHideFlags: 0

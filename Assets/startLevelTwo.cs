@@ -12,7 +12,9 @@ public class startLevelTwo : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown("Jump"))
 		{
+			Debug.Log("Entering");
 			gameManager.startLevelTwo();
+		
 		}
 	}
 }
