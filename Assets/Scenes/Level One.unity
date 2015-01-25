@@ -4312,8 +4312,6 @@ Transform:
   m_RootOrder: 8
 --- !u!65 &338584844
 BoxCollider:
---- !u!50 &338584844
-Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
