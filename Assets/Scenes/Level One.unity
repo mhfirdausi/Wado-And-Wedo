@@ -3504,6 +3504,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 200944862}
   - 212: {fileID: 200944861}
+  - 65: {fileID: 200944863}
   m_Layer: 0
   m_Name: Door_Open_Light_Top_Round
   m_TagString: Untagged
@@ -3545,6 +3546,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!65 &200944863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200944860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .919514954, y: 2.26999998, z: .200000003}
+  m_Center: {x: .680230021, y: 0, z: 0}
 --- !u!1 &203182097
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,6 +5703,7 @@ MonoBehaviour:
   gameManager: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4, type: 2}
   moveSpeed: 1
   gameStarted: 0
+  boopClip: {fileID: 0}
 --- !u!212 &338584842
 SpriteRenderer:
   m_ObjectHideFlags: 0
