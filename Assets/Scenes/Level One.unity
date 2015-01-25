@@ -4237,6 +4237,8 @@ GameObject:
   - 4: {fileID: 338584843}
   - 212: {fileID: 338584842}
   - 114: {fileID: 338584841}
+  - 54: {fileID: 338584846}
+  - 65: {fileID: 338584845}
   - 54: {fileID: 338584840}
   - 65: {fileID: 338584844}
   m_Layer: 0
@@ -4322,6 +4324,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 2.67499995, z: .200000003}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &338584845
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6568940, guid: 87b00b7f9d5ff374c97eef61a3c57db2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1094516525}
+  m_GameObject: {fileID: 338584839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &338584846
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5447344, guid: 87b00b7f9d5ff374c97eef61a3c57db2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1094516525}
+  m_GameObject: {fileID: 338584839}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &343355898
 Prefab:
   m_ObjectHideFlags: 0
@@ -16577,7 +16608,7 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .75
       objectReference: {fileID: 0}
-    - target: {fileID: 5025602, guid: 87b00b7f9d5ff374c97eef61a3c57db2, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_FixedAngle
       value: 1
       objectReference: {fileID: 0}
@@ -16586,13 +16617,13 @@ Prefab:
       value: 
       objectReference: {fileID: 11480464, guid: 410887c24713c3346864cb9e3682fbd4,
         type: 2}
-    - target: {fileID: 6012678, guid: 87b00b7f9d5ff374c97eef61a3c57db2, type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6012678, guid: 87b00b7f9d5ff374c97eef61a3c57db2, type: 2}
-    - {fileID: 5025602, guid: 87b00b7f9d5ff374c97eef61a3c57db2, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 87b00b7f9d5ff374c97eef61a3c57db2, type: 2}
   m_RootGameObject: {fileID: 338584839}
   m_IsPrefabParent: 0
