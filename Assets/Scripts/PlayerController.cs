@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-		Debug.Log(jumps);
+		//Debug.Log(jumps);
 		if (Input.GetButtonDown ("Run")) {
 			if (isPlatformer) 
 			{
