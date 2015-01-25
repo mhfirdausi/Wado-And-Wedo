@@ -40,7 +40,7 @@ public class EyeballMovement : MonoBehaviour {
 	 * Hit deadly object: everyone dies
 	 * Hit smashable wall: play animation to destroy the wall
 	 */
-	void OnCollisionEnter2D(Collision2D coll) 
+	void OnTriggerEnter(Collider coll) 
 	{
 		Debug.Log ("Hit "+ coll.gameObject.tag);
 		if (coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) {
