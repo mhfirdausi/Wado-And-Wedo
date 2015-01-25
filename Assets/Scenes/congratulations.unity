@@ -105,7 +105,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -160, y: -148}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 52}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &62753849
@@ -173,7 +173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &449327091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '- Continue'
+  m_Text: '- Again?'
 --- !u!222 &915696236
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -629,7 +629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1689325830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -721,8 +721,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 0}
-  levelTwoMusic: {fileID: 0}
   wadoDeaths: 0
   wedoDeaths: 0
   wedoTotDeaths: 0

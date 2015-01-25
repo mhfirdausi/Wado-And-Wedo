@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour {
 		wadoTotDeaths = wadoDeaths;
 		Application.LoadLevel(3);
 		curLevel = 3;
+		Screen.showCursor = true;
 	}
 	public void startLevelTwo()
 	{
@@ -145,6 +146,7 @@ public class GameManager : MonoBehaviour {
 		//curMusic.clip = levelTwoMusic;
 		Application.LoadLevel(4);
 		curLevel = 4;
+		Screen.showCursor = false;
 	}
 	public void endScreenTwo()
 	{
@@ -157,7 +159,7 @@ public class GameManager : MonoBehaviour {
 	{
 		Application.LoadLevel(0);
 		Screen.showCursor = true;
-		curLevel = 0;
+		curLevel = 1;
 		//curMusic.Stop();
 	}
 	

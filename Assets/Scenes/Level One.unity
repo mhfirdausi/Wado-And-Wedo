@@ -13165,7 +13165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &656250723
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30880,10 +30880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  levelOneMusic: {fileID: 8300000, guid: d87fe180258c707438364bd85962385b, type: 3}
-  levelTwoMusic: {fileID: 8300000, guid: 6abd00f8db6f87545bf55cd90801c5f7, type: 3}
-  wadoDeaths: 0
-  wedoDeaths: 2
+  wadoDeaths: 2
+  wedoDeaths: 0
   wedoTotDeaths: 0
   wadoTotDeaths: 0
 --- !u!4 &1406515547

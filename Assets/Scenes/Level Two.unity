@@ -505,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPaused: 0
   canvas: {fileID: 0}
-  wadoDeaths: 0
+  wadoDeaths: 2
   wedoDeaths: 0
   wedoTotDeaths: 0
   wadoTotDeaths: 0
@@ -7704,7 +7704,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 300, y: 235.080002}
+  m_AnchoredPosition: {x: 300, y: 204}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &348453827
@@ -28618,7 +28618,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 300, y: 205.079987}
+  m_AnchoredPosition: {x: 300, y: 166}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1287285374
