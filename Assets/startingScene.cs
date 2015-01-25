@@ -14,7 +14,7 @@ public class startingScene : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown("Jump"))
 		{
-			//gameManager.
+			gameManager.startGame();
 		}
 	}
 	

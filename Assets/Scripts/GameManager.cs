@@ -82,4 +82,8 @@ public class GameManager : MonoBehaviour {
 		Time.timeScale = 1;
 		canvas.enabled = false;
 	}
+	public void instrScreen()
+	{
+		Application.LoadLevel(2);
+	}
 }
