@@ -43,15 +43,12 @@ public class EyeballMovement : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
 		Debug.Log ("Hit "+ coll.gameObject.tag);
-		if (coll.gameObject.tag == "EyeballSmash") {
-			Destroy(coll.gameObject);
-		}
-		if (coll.gameObject.tag == "DeadlyToEyeball") {
-			Destroy(this.gameObject);
+		if (coll.gameObject.layer == 8 || coll.gameObject.layer == 10 || coll.gameObject.layer == 13) {
+			gameManager.callDeath();
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D coll) {
-		Debug.Log ("Triggered " + coll.gameObject.name);
-	}
+//	void OnTriggerEntered2D(Collider2D coll) {
+//		Debug.Log ("Triggered " + coll.gameObject.name);
+//	}
 }
